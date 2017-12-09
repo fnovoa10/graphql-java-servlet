@@ -17,6 +17,7 @@ import java.util.Optional;
  */
 public class SimpleGraphQLServlet extends GraphQLServlet {
 
+
     /**
      * @deprecated use {@link #builder(GraphQLSchema)} instead.
      */
@@ -90,7 +91,7 @@ public class SimpleGraphQLServlet extends GraphQLServlet {
         }
     }
 
-    private SimpleGraphQLServlet(Builder builder) {
+    public SimpleGraphQLServlet(Builder builder) {
         super(builder.objectMapperConfigurer, builder.listeners, null);
 
         this.schemaProvider = builder.schemaProvider;
